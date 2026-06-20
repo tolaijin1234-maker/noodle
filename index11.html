@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>燉日子．牛肉麵</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo"><img src="images/logo.png" alt="燉日子"><span>燉日子</span></div>
+  <nav class="nav">
+    <a href="#about">品牌故事</a>
+    <a href="#menu">人氣菜單</a>
+    <a href="#feature">特色</a>
+    <a href="#contact">店家資訊</a>
+  </nav>
+  <button class="menu-btn">☰</button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>一碗用心的牛肉麵</h1>
+    <p>每日慢火熬煮湯頭，嚴選牛肉與手工麵條，帶給你最溫暖的家常味。</p>
+    <a href="#menu" class="btn">查看菜單</a>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <h2>品牌故事</h2>
+  <p>
+    燉日子牛肉麵堅持每日新鮮熬煮湯底，使用牛骨、蔬果與多種香料慢火熬製，
+    讓每一口湯都濃郁卻不死鹹。我們希望客人吃到的不只是牛肉麵，而是一份熟悉又安心的味道。
+  </p>
+</section>
+
+<section id="menu" class="section">
+  <h2>人氣菜單</h2>
+
+  <div class="filter-btns">
+    <button data-type="all">全部</button>
+    <button data-type="beef">牛肉麵</button>
+    <button data-type="side">小菜</button>
+    <button data-type="drink">飲料</button>
+  </div>
+
+  <div class="menu-slider-wrap">
+    <button class="slider-btn prev">‹</button>
+
+    <div class="menu-list" id="menuSlider">
+      <div class="card beef">
+        <img src="images/n1.png" alt="紅燒牛肉麵">
+        <h3>紅燒牛肉麵</h3>
+        <p>濃郁湯頭搭配軟嫩牛腱肉。</p>
+        <span>NT$160</span>
+        <button class="add-cart" data-name="紅燒牛肉麵" data-price="160">加入購物車</button>
+      </div>
+
+      <div class="card beef">
+        <img src="images/n2.png" alt="清燉牛肉麵">
+        <h3>清燉牛肉麵</h3>
+        <p>清爽湯底，喝得到牛肉原味。</p>
+        <span>NT$150</span>
+        <button class="add-cart" data-name="清燉牛肉麵" data-price="150">加入購物車</button>
+      </div>
+
+      <div class="card beef">
+        <img src="images/n3.png" alt="半筋半肉麵">
+        <h3>半筋半肉麵</h3>
+        <p>牛筋 Q 彈，牛肉軟嫩入味。</p>
+        <span>NT$190</span>
+        <button class="add-cart" data-name="半筋半肉麵" data-price="190">加入購物車</button>
+      </div>
+
+      <div class="card side">
+        <img src="images/n4.png" alt="滷味拼盤">
+        <h3>滷味拼盤</h3>
+        <p>豆干、海帶、滷蛋。</p>
+        <span>NT$80</span>
+        <button class="add-cart" data-name="滷味拼盤" data-price="80">加入購物車</button>
+      </div>
+
+      <div class="card drink">
+        <img src="images/n5.png" alt="酸梅湯">
+        <h3>酸梅湯</h3>
+        <p>古法熬煮，酸甜解膩。</p>
+        <span>NT$40</span>
+        <button class="add-cart" data-name="酸梅湯" data-price="40">加入購物車</button>
+      </div>
+    </div>
+
+    <button class="slider-btn next">›</button>
+  </div>
+</section>
+
+<section class="section cart-section">
+  <h2>購物車</h2>
+
+  <div class="cart-box">
+    <ul id="cartList"></ul>
+
+    <p class="cart-total">
+      總金額：NT$<span id="totalPrice">0</span>
+    </p>
+
+    <button id="clearCart">清空購物車</button>
+    <button id="checkoutBtn">前往結帳</button>
+  </div>
+</section>
+
+<section id="feature" class="section feature">
+  <h2>我們的堅持</h2>
+  <div class="feature-list">
+    <div>
+      <h3>慢火熬湯</h3>
+      <p>每日熬煮 8 小時，湯頭濃郁自然。</p>
+    </div>
+    <div>
+      <h3>嚴選牛肉</h3>
+      <p>使用牛腱與牛筋，口感軟嫩有層次。</p>
+    </div>
+    <div>
+      <h3>手工麵條</h3>
+      <p>麵條 Q 彈有嚼勁，吸附湯汁更入味。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section review">
+  <h2>顧客好評</h2>
+
+  <div id="review-stars" class="review-stars">
+    ★★★★★
+  </div>
+
+  <p id="review-text">
+    「湯頭很濃但不會太鹹，牛肉也很嫩，是會想再訪的店！」
+  </p>
+
+  <button id="changeReview">換一則評價</button>
+</section>
+
+<section id="contact" class="section contact">
+  <h2>店家資訊</h2>
+  <p>地址：台中市北屯區崇德路1號</p>
+  <p>電話：04-1234-5678</p>
+  <p>營業時間：週一至週日 11:00 - 21:00</p>
+</section>
+
+<footer class="footer">
+  <p>© 2026 燉日子 All Rights Reserved.</p>
+</footer>
+
+<div id="socialBtns">
+
+  <a href="https://line.me/"
+     target="_blank"
+     class="social-btn line"
+     title="LINE訂位">
+
+    <i class="fab fa-line"></i>
+     <span class="tooltip">LINE訂位</span>
+  </a>
+
+  <a href="https://instagram.com/"
+     target="_blank"
+     class="social-btn ig"
+     title="IG粉專">
+
+    <i class="fab fa-instagram"></i>
+    <span class="tooltip">IG粉專</span>
+  </a>
+
+  <a href="tel:04-1234-5678"
+     class="social-btn phone"
+     title="電話訂位">
+
+    <i class="fas fa-phone"></i>
+    <span class="tooltip">電話訂位</span>
+  </a>
+
+</div>
+
+<button id="topBtn">↑</button>
+
+<div id="checkoutModal" class="modal">
+<div class="modal-content">
+<span id="closeModal">&times;</span>
+<h2>訂單資訊</h2>
+    <input type="text" id="customerName"
+           placeholder="請輸入姓名">
+
+    <input type="text" id="customerPhone"
+           placeholder="請輸入電話">
+
+    <textarea id="customerAddress"
+              placeholder="請輸入地址"></textarea>
+
+    <button id="submitOrder">送出訂單</button>
+    <button id="cancelOrder">返回購物車</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
